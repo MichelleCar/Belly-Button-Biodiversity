@@ -62,6 +62,7 @@ This project constructs a dashboard to showcase data visualization for the belly
 * Deploy an interactive webpage to GitHub Pages (https://pages.github.com/)
 
 
+
 **[Click HERE to view the live project!](https://michellecar.github.io/)**
 
 <img width="717" alt="Screenshot 2023-02-09 at 12 12 29 AM" src="https://user-images.githubusercontent.com/115101031/217723834-230244d5-8bc1-4340-b422-89fd24103c76.png">
