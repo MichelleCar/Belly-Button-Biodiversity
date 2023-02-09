@@ -55,8 +55,7 @@ Unlike prior challenges, JavaScript definitely takes some getting used to!  Give
 
 #### Results
 
-**Click here to view the live project!**
-
+![Click HERE to view the live project!](https://michellecar.github.io/)
 
 ![MCarvalho - index html page](https://user-images.githubusercontent.com/115101031/217626316-cc8799ca-4759-4cc1-b750-1db36f78d936.jpg)
 
