@@ -54,6 +54,7 @@ function init() {
         metaData(first_sample);
         barChart(first_sample);
         bubbleChart(first_sample);
+        gaugeChart(first_sample);
 
     });
 };
@@ -175,6 +176,79 @@ function bubbleChart(first_sample) {
 };
 
 
+//--------------------------3-----------------------------------
+// 3. Create a bubble chart that displays each sample.
+// https://plotly.com/javascript/gauge-charts/
+
+// Build the gauge chart
+function gaugeChart(first_sample) {
+
+    // Use D3 to retrieve all of the data
+    d3.json(url).then((data) => {
+
+        // Retrieve all metadata
+        let metadata = data.metadata;
+
+        // Filter based on the value of the first sample
+        let value = metadata.filter(result => result.id == first_sample);
+
+        // Log the array of metadata objects after they have been filtered
+        console.log(value)
+
+        // Get the first index from the array
+        let valueData = value[0];
+
+        // Use Object.entries to get the key/value pairs and put into the demographics box on the page
+        let washingFrequency = Object.values(valueData)[6];
+        
+        // Set up the trace for the gauge chart
+        let trace3 = {
+            value: washingFrequency,
+            domain: {x: [0,1], y: [0,1]},
+            title: {
+                text: "<b>Belly Button Washing Frequency</b><br>Scrubs per Week",
+                font: {color: "black", size: 16}
+            },
+            type: "indicator",
+            mode: "gauge+number",
+            gauge: {
+                axis: {range: [0,10], tickmode: "linear", tick0: 2, dtick: 2},
+                bar: {color: "black"},
+                steps: [
+                    {range: [0, 1], color: "rgb(215,48,39)"},
+                    {range: [1, 2], color: "rgb(244,109,67)"},
+                    {range: [2, 3], color: "rgb(253,174,97)"},
+                    {range: [3, 4], color:  "rgb(254,224,144)"},
+                    {range: [4, 5], color:  "rgb(224,243,248)"},
+                    {range: [5, 6], color: "rgb(171,217,233)"},
+                    {range: [6, 7], color: "rgb(116,173,209)"},
+                    {range: [7, 8], color:  "rgb(69,117,180)"},
+                    {range: [8, 9], color: "rgb(49,54,149)"},
+                    {range: [9, 10], color: "rgb(44,47,93)"},
+                ]
+            } 
+        };
+
+        // Set up the Layout
+        let layout = {
+            width: 400, 
+            height: 300,
+            margin: {
+                l: 50,
+                r: 50,
+                b: 20,
+                t: 50,
+                pad: 10
+            }
+        };
+
+        // Call Plotly to plot the gauge chart
+        Plotly.newPlot("gauge", [trace3], layout)
+    });
+};
+
+
+
 //-------------------------4 & 5----------------------------------
 // 4. Display the sample metadata, i.e., an individual's demographic information.
 // 5. Display each key-value pair from the metadata JSON object somewhere on the page.
@@ -233,6 +307,7 @@ function sampleChanged() {
     metaData(new_sample);
     barChart(new_sample);
     bubbleChart(new_sample);
+    gaugeChart(new_sample);
 };
 
 // Update the restyled plot's values
