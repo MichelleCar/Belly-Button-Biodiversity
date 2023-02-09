@@ -59,7 +59,7 @@ This project constructs a dashboard to showcase data visualization for the belly
 * Data visualizations that are interactive
 * Manipulate and transform data
 * Interactive features such as dropdowns and retrieval of data from external sources
-* Deploy an interactive webpage to GitHub Pages
+* Deploy an interactive webpage to GitHub Pages (https://pages.github.com/)
 
 [Click HERE to view the live project!](https://michellecar.github.io/)
 
