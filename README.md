@@ -55,8 +55,26 @@ Unlike prior challenges, JavaScript definitely takes some getting used to!  Give
 
 #### Results
 
+This project constructs a dashboard to showcase data visualization for the belly button biodiversity dataset. This includes:
+* Data visualizations that are interactive
+* Manipulate and transform data
+* Interactive features such as dropdowns and retrieval of data from external sources
+* Deploy an interactive webpage to GitHub Pages
+
 [Click HERE to view the live project!](https://michellecar.github.io/)
 
-![MCarvalho - index html page](https://user-images.githubusercontent.com/115101031/217626316-cc8799ca-4759-4cc1-b750-1db36f78d936.jpg)
+<img width="717" alt="Screenshot 2023-02-09 at 12 12 29 AM" src="https://user-images.githubusercontent.com/115101031/217723834-230244d5-8bc1-4340-b422-89fd24103c76.png">
 
+Users visiting the page can select an ID number from the dropdown menu to populate the demographic information and display visualizations:
+* Demographic Information - When a volunteer ID is chosen from the dropdown menu, that person's demographic information, such as location, sex, and age, will be displayed
 
+* Top 10 Bacterial Species (OTUs) - When a volunteer ID is selected from the dropdown menu, that person's top 10 bacterial species (OTUs) are displayed in a horizontal bar chart:
+<img width="505" alt="bar chart" src="https://user-images.githubusercontent.com/115101031/217724809-e809b8f5-b5f9-4c12-953f-5c8e9309e2f6.png">
+
+* Belly Button Washing Frequency - When a volunteer ID is selected from the dropdown menu, that person's weekly washing frequency is displayed as a measure from 0-10 in a gauge chart:
+<img width="390" alt="Screenshot 2023-02-09 at 12 20 30 AM" src="https://user-images.githubusercontent.com/115101031/217724999-ed55cdb7-f398-4ef0-bcca-70ed0b79e4ce.png">
+
+* Bacteria Cultures Per Sample - When a volunteer ID is selected from the dropdown menu, that person's bacteria culture per sample (otu_ids as x-axis & sample_values as y-axis) is displayed as a bubble chart:
+<img width="1142" alt="bubble chart" src="https://user-images.githubusercontent.com/115101031/217725318-a24d9807-b008-480c-ad6b-0df3642fbfef.png">
+
+* As a new ID number is selected, the page is updated.
